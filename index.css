@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    background: linear-gradient(90deg, #fff9c4, #9f616b);
+}
+
+.navbar {
+  background-color: #fc8181;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navlist {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navlist li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+
+.navlist li a:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.menuicon img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menuicon img:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .navlist {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navlist.active {
+        display: flex;
+        background-color: #34495e;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .navlist li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+.hero {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.heroleft, .heroright {
+    width: 50%;
+    height: 100%;
+}
+
+.heroleft {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroleft h1 {
+    font-size: 48px;
+    color: #150215;
+    margin-bottom: 20px;
+}
+
+.heroleft p {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #231e1e;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.heroleft button {
+    background-color: #fc8181;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.heroleft button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.heroright img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .heroright img {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+}
+
+.layout {
+    display: flex;
+    height: 600px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-half {
+    display: flex;
+    width: 48%;
+    gap: 20px;
+    padding-left: 80px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.section-2 {
+    width: 50%;
+}
+
+.stacked-image,
+.tall-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.section-1 .stacked-image {
+    height: calc(50% - 5px);
+}
+
+.section-2 .tall-image {
+    height: 100%;
+}
+
+.right-half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 60%;
+    height: 40%;
+    background-color: rgba(174, 43, 82, 0.888);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lorem {
+    margin-top: 30px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+
+}
+
+.heroleft button {
+  width: 10rem;
+}
+
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fc8181 ;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+
+  .card h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+.navlist li a {
+  text-decoration: none;
+  color: #000; /* black text */
+  font-weight: 700;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
